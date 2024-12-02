@@ -46,6 +46,10 @@ export const DeleteButton = styled(Button)`
 export const ReviewText = styled(Input.TextArea)`
   margin-top: 8px;
   resize: none;
+
+  &:disabled {
+    color: black;
+  }
 `;
 
 export const ContentInfoContainer = styled.div`
