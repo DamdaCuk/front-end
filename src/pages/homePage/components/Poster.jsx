@@ -24,7 +24,7 @@ const Poster = ({ homeId, onClick }) => {
     };
 
     fetchData();
-  }, []);
+  }, [homeId]);
 
   return (
     <PosterContainer>

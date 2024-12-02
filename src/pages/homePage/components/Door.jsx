@@ -28,7 +28,7 @@ const GuestbookContainer = styled.img`
   }
 `;
 
-const Door = () => {
+const Door = ({ homeId }) => {
   const navigate = useNavigate();
 
   const toSearchHome = () => {
@@ -37,7 +37,7 @@ const Door = () => {
 
   const toGuestbook = (e) => {
     e.stopPropagation(); // 문 클릭시 이벤트 막기
-    navigate("/home/guestbook");
+    navigate(`/guestbook/${homeId}`);
   };
 
   return (

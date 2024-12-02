@@ -19,7 +19,7 @@ const HomePage = () => {
   const isMine = numericHomeId === USER_HOME_ID;
 
   const toContent = (category) => {
-    navigate(`/content/${category}`);
+    navigate(`/contents/${category}/${homeId}`);
   };
 
   return (
@@ -35,7 +35,7 @@ const HomePage = () => {
         alt="턴테이블 이미지"
         onClick={() => toContent("music")}
       />
-      <Door />
+      <Door homeId={homeId} />
       {!isMine && <Like homeId={homeId} />}
       <Share />
     </PageContainer>

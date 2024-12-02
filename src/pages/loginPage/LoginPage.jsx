@@ -9,12 +9,18 @@ import {
 import TitleLogo from "./assets/title.png";
 import DamdaLogo from "./assets/damda.png";
 import NaverLogo from "./assets/naver.png";
+import { USER_HOME_ID } from "../../config";
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
   const goToHome = () => {
-    navigate("/");
+    const homeId = USER_HOME_ID;
+    navigate(`/${homeId}`);
+  };
+
+  const goToSearchHome = () => {
+    navigate(`/search/home`);
   };
 
   return (
@@ -27,7 +33,7 @@ const LoginPage = () => {
             <img src={NaverLogo} alt="네이버 로고" />
             <span>네이버로 시작하기</span>
           </LoginButton>
-          <LoginPassButton onClick={goToHome}>
+          <LoginPassButton onClick={goToSearchHome}>
             로그인 없이 시작하기
           </LoginPassButton>
         </LoginContainer>
