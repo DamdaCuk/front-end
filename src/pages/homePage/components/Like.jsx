@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import FillHeart from "../assets/img/fillHeart.png";
 import Heart from "../assets/img/heart.png";
-import { getLikeState, addLike, deleteLike } from "../../../server/like";
+import { getLikeState, addLike, deleteLike } from "../../../server/guestbook";
 
 const LikeContainer = styled.div`
   width: 50px;
