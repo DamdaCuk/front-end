@@ -110,6 +110,7 @@ const Review = ({ category, content, isModalOpen, setIsModalOpen, isMine }) => {
           <Rate
             value={rating}
             onChange={(value) => isMine && setRating(value)}
+            disabled={!isMine}
           />
           <ReviewText
             rows={4}
