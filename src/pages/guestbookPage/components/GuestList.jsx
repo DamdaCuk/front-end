@@ -8,7 +8,7 @@ const GuestList = ({ data, handleDelete }) => {
         align: "center",
         pageSize: 6,
       }}
-      dataSource={data}
+      dataSource={data.reverse()}
       renderItem={(item, index) => (
         <List.Item
           actions={[
@@ -25,7 +25,7 @@ const GuestList = ({ data, handleDelete }) => {
           <List.Item.Meta
             avatar={
               <Avatar
-                src={`https://api.dicebear.com/9.x/miniavs/svg?seed=${item.authorMemberId}`}
+                src={`https://api.dicebear.com/9.x/miniavs/svg?seed=${item.commentId}`}
               />
             }
             description={item.comment}
