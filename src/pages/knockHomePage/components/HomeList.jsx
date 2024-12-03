@@ -53,7 +53,7 @@ const HomeList = ({ contentsId, category }) => {
   }, [contentsId, category]);
 
   const handleKnock = (homeId) => {
-    navigate(`/${homeId}`);
+    navigate(`/${homeId}`, { state: { from: "/search/home/result" } });
   };
 
   const handleSort = (option) => {

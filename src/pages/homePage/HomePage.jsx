@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import {
   PageContainer,
   TurntableContainer,
@@ -10,9 +10,11 @@ import Poster from "./components/Poster";
 import Door from "./components/Door";
 import Like from "./components/Like";
 import Share from "./components/Share";
+import BackButton from "../../components/BackButton";
 import { USER_HOME_ID } from "../../config";
 
 const HomePage = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const { homeId } = useParams();
   const numericHomeId = Number(homeId);
@@ -24,6 +26,7 @@ const HomePage = () => {
 
   return (
     <PageContainer>
+      {location.state?.from === "/search/home/result" && <BackButton />}
       <BookcaseContainer
         src={Bookcase}
         alt="책장 이미지"
