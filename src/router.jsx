@@ -7,6 +7,7 @@ import ContentPage from "./pages/contentPage/ContentPage";
 import SearchContentsPage from "./pages/searchContentsPage/SearchContentsPage";
 import GuestbookPage from "./pages/guestbookPage/GuestbookPage";
 import KnockHomePage from "./pages/knockHomePage/KnockHomePage";
+import RegisterHomePage from "./pages/registerHomePage/RegisterHomePage";
 
 export default createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export default createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterHomePage />,
       },
       {
         path: "/:homeId",

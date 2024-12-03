@@ -15,8 +15,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const goToHome = () => {
-    const homeId = USER_HOME_ID;
-    navigate(`/${homeId}`);
+    navigate(`/register`);
   };
 
   const goToSearchHome = () => {
